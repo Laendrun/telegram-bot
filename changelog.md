@@ -26,3 +26,8 @@
     - DB_USER
     - DB_PASS
     - DB_HOST
+
+# v0.3.0
+
+- **New command /commands** added
+    - Responds with a list of available commands

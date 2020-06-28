@@ -11,8 +11,6 @@ function sendMessage(chat_id, text, parse_mode = null, disable_web_page_preview 
         request = `${request}&disable_web_page_preview=${disable_web_page_preview}`;
     }
 
-    console.log(request);
-
     Axios.post((request), {})
         .then((response) => {
             return response.data.ok;
