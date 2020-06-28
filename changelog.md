@@ -16,3 +16,13 @@
 - Added new environment variable
     - REQUEST_URL
 - **New command /start** added
+
+# v0.2.0
+
+- **New command /eat** added
+    - When typing */eat* the bot responds with a randomly chosen meal type.
+- Added new environment variables
+    - DB_NAME
+    - DB_USER
+    - DB_PASS
+    - DB_HOST
