@@ -23,9 +23,8 @@ exports.commandHandler = (req, res, next) => {
         command = text.replace('/', '').trim();
 
         if (commandExists(command, commands)) {
-
             try {
-                commands[command].execute(req.body);
+                commands[command].execute(req.body, commands);
             } catch (error) {
                 sendMessage(chat_id, `Erreur ${error}`);
             }
@@ -38,7 +37,7 @@ exports.commandHandler = (req, res, next) => {
         })
     } else {
         sendMessage(chat_id, `I can't understand "${text}", try with a / before maybe`);
-
+        deleteMessage(chat_id, message_id);
         res.stauts(200).json({
             method: '',
         })
